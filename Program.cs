@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 class programm 
 {
@@ -43,21 +43,13 @@ class programm
     {
         Random random_function = new Random();
         Console.WriteLine("Hello, this is the game THE FIND NUMBER");
-
         int range = input_range();
-
         int answer = random_function.Next() % range;
         Console.WriteLine(answer);
-
         int try_number = 1, hint_number = 1, half_range = range / 2;
-
         while (true) {
-            
-            
             int trying = input_trying(try_number);
-            
             if ((try_number % 2) == 1 && answer != trying) {
-
                 string hint_y_or_n = input_hint();
                 if (hint_y_or_n == "y") {
                     switch (hint_number)
@@ -72,7 +64,6 @@ class programm
                             }
                             hint_number++;
                             break;
-
                         case 2:
                             if ((answer % 2) == 1)
                             {
@@ -95,15 +86,11 @@ class programm
                 }
 
             }
-
-
             if (trying == answer) {
                 break;
             }
-        
             try_number++;
         }
-
         Console.WriteLine($"You are won with {try_number}th trying");
     }
 
