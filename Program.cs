@@ -55,7 +55,6 @@ class programm
         Console.WriteLine("Hello, this is the game THE FIND NUMBER");
         int range = input_range();
         int answer = random_function.Next() % range;
-        Console.WriteLine(answer);
         int try_number = 1, hint_number = 1, half_range = range / 2;
         while (true) {
             int trying = input_trying(try_number);
